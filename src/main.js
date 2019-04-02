@@ -8,11 +8,6 @@ import lang from 'element-ui/lib/locale/lang/en'
 import locale from 'element-ui/lib/locale'
 import App from './App.vue'
 
-
-//Apollo
-//import apolloClient from './apolloClient'
-//import VueApollo from 'vue-apollo'
-
 //agGrid
 import agGrid from './js/agGrid'
 
