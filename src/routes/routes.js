@@ -17,8 +17,7 @@ import TestApollo from 'src/components/Dashboard/Views/TestHigh/TestApollo.vue'
 import TestGrid from 'src/components/Dashboard/Views/TestHigh/TestGrid.vue'
 
 // add api SamplePage
-import Index from 'src/components/Dashboard/Views/Sample/IndexPage'
-import Show from  'src/components/Dashboard/Views/Sample/ShowPage'
+import Sample from 'src/views/sample/SamplePage'
 
 // Components pages
 import Buttons from 'src/components/Dashboard/Views/Components/Buttons.vue'
@@ -201,39 +200,11 @@ let lockPage = {
   name: 'Lock',
   component: Lock
 }
-/*
 const routes = [
   {
     path: '/',
     component: DashboardLayout,
-    redirect: 'testhigh',
-    children: [
-      {
-        path: 'testhigh',
-        name: 'TestHigh',
-        component: TestHigh
-      },
-      {
-        path: 'testlow',
-        name: 'TestLow',
-        component: TestLow
-      },
-      {
-        path: 'testapollo',
-        name: 'TestApollo',
-        component: TestApollo
-      }
-
-    ]
-  },
-  {path: '*', component: NotFound}
-];
-*/
-const routes = [
-  {
-    path: '/',
-    component: DashboardLayout,
-    redirect: '/admin/overview',
+    //redirect: '/admin/overview',
     children: [
       {
         path: 'calendar',
@@ -267,14 +238,9 @@ const routes = [
       },
       // add  190401
       {
-        path: 'index',
-        name: 'index',
-        component: Index
-      },
-      {
-        path: 'index/:id',
-        name: 'show',
-        component: Show
+        path: 'sample',
+        name: 'sample',
+        component: Sample
       }
     ]
   },

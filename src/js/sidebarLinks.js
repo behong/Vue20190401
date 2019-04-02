@@ -1,5 +1,10 @@
 export default [
   {
+    name: 'SAMPLE',
+    icon: 'nc-icon nc-zoom-split',
+    path: '/sample'
+  },
+  {
     name: 'TestHigh',
     icon: 'nc-icon nc-zoom-split',
     path: '/testhigh'

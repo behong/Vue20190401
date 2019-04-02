@@ -1,5 +1,5 @@
 import Vue from 'vue'
-import './pollyfills'
+import './js/pollyfills'
 import VueRouter from 'vue-router'
 import VueRouterPrefetch from 'vue-router-prefetch'
 import VueNotify from 'vue-notifyjs'
@@ -10,28 +10,27 @@ import App from './App.vue'
 
 
 //Apollo
-import apolloClient from './apolloClient'
-import VueApollo from 'vue-apollo'
+//import apolloClient from './apolloClient'
+//import VueApollo from 'vue-apollo'
 
 //agGrid
-import agGrid from './agGrid'
+import agGrid from './js/agGrid'
 
 // Plugins
-import GlobalComponents from './globalComponents'
-import GlobalDirectives from './globalDirectives'
+import GlobalComponents from './js/globalComponents'
+import GlobalDirectives from './js/globalDirectives'
 import SideBar from './components/UIComponents/SidebarPlugin'
-import initProgress from './progressbar';
+import initProgress from './js/progressbar';
 
 // router setup
 import routes from './routes/routes'
 
 // library imports
-
 import './assets/sass/paper-dashboard.scss'
 import './assets/sass/demo.scss'
 
-import sidebarLinks from './sidebarLinks'
-import './registerServiceWorker'
+import sidebarLinks from './js/sidebarLinks'
+import './js/registerServiceWorker'
 
 // add axios 190401
 import axios from 'axios'
@@ -41,7 +40,6 @@ Vue.prototype.$hostname = 'https://jsonplaceholder.typicode.com'
 // plugin setup
 Vue.use(VueRouter)
 Vue.use(VueRouterPrefetch)
-Vue.use(VueApollo)
 Vue.use(GlobalDirectives)
 Vue.use(GlobalComponents)
 Vue.use(VueNotify)
@@ -63,20 +61,14 @@ const router = new VueRouter({
   }
 })
 
-const apolloProvider = new VueApollo({
-  defaultClient: apolloClient
-})
-
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
   render: h => h(App),
   router,
-  apolloProvider,
   agGrid,
   axios
 })
-
 
 
 initProgress(router);
