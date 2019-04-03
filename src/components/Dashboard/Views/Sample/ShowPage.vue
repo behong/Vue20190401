@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1>상세 내용</h1>
+    <h1>상세 </h1>
 
   </div>
 </template>
